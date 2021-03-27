@@ -52,6 +52,11 @@ import java.util.Set;
 @Component(service = Servlet.class, property = { Constants.SERVICE_DESCRIPTION + "=CUG Mismatch Servlet",
 		"sling.servlet.methods=" + HttpConstants.METHOD_GET, "sling.servlet.paths=" + "/bin/cug-mismatch-report" })
 
+/**
+Check the repository using Query Builder API
+Generate csv file based on the report - that downloads to local
+Also get the CUG on a resource path
+**/
 public class CugMismatchServlet extends SlingSafeMethodsServlet {
 
 	private static final long serialVersionUID = 1L;
